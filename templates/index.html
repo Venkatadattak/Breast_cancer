@@ -1,0 +1,24 @@
+<html>
+<title>cancer prediction</title>
+	<head>
+	<h1>Breast Cancer</h1>
+	</head>
+<body>
+    <div class="content">
+    <h2 style="text-align:center">Malignant</h2>
+    <p style="text-align:center">Malignant tumors are cancerous. They develop when cells grow uncontrollably. If the cells continue to grow and spread, the disease can become life threatening. Malignant tumors can grow quickly and spread to other parts of the body in a process called metastasis.</p>
+    <h2 style="text-align:center">Benign</h2>
+    <p style="text-align:center">Benign refers to a condition, tumor, or growth that is not cancerous. This means that it does not spread to other parts of the body.</p>
+
+
+    <div class="form" >
+        <form action="{{ url_for('predict')}}" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+	</div>
+    {{ prediction }}
+</body>
+</html>
+
